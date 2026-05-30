@@ -40,6 +40,11 @@ Registration is intentionally not exposed in the UI.
 - Stores each set as an individual row.
 - Access is inherited from the owning workout.
 
+`cardio_logs`
+- User-owned cardio sessions.
+- Stores the cardio machine type and duration in minutes.
+- `created_at` is generated automatically. The UI does not expose manual date entry.
+
 ## Service Operations
 
 Weight:
@@ -57,6 +62,12 @@ Workouts:
 - `upsertExerciseLogs(workoutId, rows)`
 - `deleteWorkout(id)`
 
+Cardio:
+- `getCardioLogs()`
+- `createCardioLog(machineType, durationMinutes)`
+- `updateCardioLog(id, values)`
+- `deleteCardioLog(id)`
+
 Dashboard:
 - Aggregates weight trends, body fat trends, workout frequency, monthly workouts, total training days, and current streak from Supabase rows.
 
@@ -66,6 +77,7 @@ Dashboard:
 2. Run `backend/migrations/001_initial_schema.sql`.
 3. Run `backend/migrations/002_rls_policies.sql`.
 4. Run `backend/migrations/003_seed_exercises.sql`.
-5. Create one Auth user in Supabase.
-6. Add `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` to Vercel.
-7. Deploy `/frontend` to Vercel.
+5. Run `backend/migrations/004_cardio_logs.sql`.
+6. Create one Auth user in Supabase.
+7. Add `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` to Vercel.
+8. Deploy `/frontend` to Vercel.
