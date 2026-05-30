@@ -4,7 +4,6 @@ insert into public.exercises (workout_type, name, sets, reps, notes, sort_order)
 ('Push A', 'Chest Press Machine', 4, '10-12', 'Controlled eccentric. Keep shoulder blades pinned.', 10),
 ('Push A', 'Incline Chest Press Machine', 4, '10-12', 'Drive through upper chest without locking elbows hard.', 20),
 ('Push A', 'Chest Fly Machine (Pec Deck)', 3, '12-15', 'Soft elbows. Pause briefly at peak contraction.', 30),
-('Push A', 'Cable Crossover (Low to High)', 3, '12-15', 'Low-to-high line. Finish hands near upper chest.', 40),
 ('Push A', 'Shoulder Press Machine', 3, '10-12', 'Brace core and keep tempo smooth.', 50),
 ('Push A', 'Lateral Raise Machine', 3, '12-15', 'Lead with elbows. Avoid shrugging.', 60),
 ('Push A', 'Triceps Pushdown', 3, '12-15', 'Elbows fixed. Full extension each rep.', 70),
